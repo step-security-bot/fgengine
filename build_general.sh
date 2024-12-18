@@ -1,0 +1,13 @@
+#!/bin/bash
+TARGET_DIRECTORY=$1
+
+source "$SCRIPT_DIRECTORY/config.sh" && \
+clear && \
+    cd $TARGET_DIRECTORY && \
+    make clean && \
+    make -j $(( `nproc` - 1 )) && \
+    mv "$OUTPUT_FILE" "$BUILD_DIRECTORY" && \
+    clang-format --style="file:$SCRIPT_DIRECTORY/.clang-format" \
+    -i \
+    $FILE_LIST && \
+    cd "$SCRIPT_DIRECTORY"

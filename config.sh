@@ -1,1 +1,4 @@
-#!/bin/sh
+#!/bin/bash
+declare -a partsToBuild=(
+    "main"
+)

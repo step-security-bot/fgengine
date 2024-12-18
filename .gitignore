@@ -1,6 +1,12 @@
+# Vim
 **/*~
 **/*.swp
 **/.*~
 **/.*.swp
 
+# Binary
+**/*.o
+**/*.exe
+
+# In-progress
 Style_Guide.md
