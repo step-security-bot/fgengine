@@ -51,8 +51,8 @@ RC_SRCS               = $(main_exe_RC_SRCS)
 
 ### Tools
 
-CC = gcc
-CXX = g++
+CC = ccache gcc
+CXX = ccache g++
 RC = rcc
 AR = ar
 
