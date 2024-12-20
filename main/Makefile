@@ -12,7 +12,7 @@ CEXTRA                =
 CXXEXTRA              =
 RCEXTRA               =
 DEFINES               =
-INCLUDE_PATH          =
+INCLUDE_PATH          = -I applicationState_t/include
 DLL_PATH              =
 DLL_IMPORTS           =
 LIBRARY_PATH          =
@@ -22,7 +22,11 @@ LIBRARIES             = -lSDL3
 ### main.exe sources and settings
 
 main_exe_MODULE       = main.exe
-main_exe_C_SRCS       = src/main.c
+main_exe_C_SRCS       = src/main.c \
+			src/init.c \
+			src/iterate.c \
+			src/event.c \
+			src/quit.c
 main_exe_CXX_SRCS     =
 main_exe_RC_SRCS      =
 main_exe_LDFLAGS      =
